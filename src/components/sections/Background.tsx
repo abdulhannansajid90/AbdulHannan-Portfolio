@@ -22,33 +22,35 @@ export function Background() {
           {/* 9 columns content on the right */}
           <div className="lg:col-span-9 space-y-16">
             {/* Experience Sub-block */}
-            <Reveal>
-              <div>
-                <h3 className="mono-label block mb-6 text-[var(--ink)] font-semibold">
-                  Experience
-                </h3>
-                <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
-                  {experiences.map((exp) => (
-                    <div key={exp.title + exp.organization} className="py-6 space-y-2">
-                      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                        <div className="font-semibold text-base sm:text-lg text-[var(--ink)]">
-                          {exp.title}{' '}
-                          <span className="text-[var(--muted)] font-normal">
-                            &middot; {exp.organization}
+            {experiences && experiences.length > 0 && (
+              <Reveal>
+                <div>
+                  <h3 className="mono-label block mb-6 text-[var(--ink)] font-semibold">
+                    Experience
+                  </h3>
+                  <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
+                    {experiences.map((exp) => (
+                      <div key={exp.title + exp.organization} className="py-6 space-y-2">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+                          <div className="font-semibold text-base sm:text-lg text-[var(--ink)]">
+                            {exp.title}{' '}
+                            <span className="text-[var(--muted)] font-normal">
+                              &middot; {exp.organization}
+                            </span>
+                          </div>
+                          <span className="font-mono text-xs text-[var(--muted)] shrink-0">
+                            {exp.period}
                           </span>
                         </div>
-                        <span className="font-mono text-xs text-[var(--muted)] shrink-0">
-                          {exp.period}
-                        </span>
+                        <p className="text-sm text-[var(--muted)] leading-relaxed">
+                          {exp.description}
+                        </p>
                       </div>
-                      <p className="text-sm text-[var(--muted)] leading-relaxed">
-                        {exp.description}
-                      </p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            )}
 
             {/* Education Sub-block */}
             <Reveal>
