@@ -4,6 +4,7 @@ import '@fontsource-variable/geist-mono';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { BackgroundAnimation } from '@/components/ui/BackgroundAnimation';
 import { siteMetadata, getPersonJsonLd } from '@/lib/seo';
 import { getBaseUrl } from '@/lib/utils';
 
@@ -94,7 +95,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--ink)]">
+      <body className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--ink)] relative">
+        <BackgroundAnimation />
         {/* Skip to Content Link for WCAG 2.2 AA Keyboard Navigation */}
         <a
           href="#main-content"
@@ -103,9 +105,11 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <Header />
-        <div className="flex-1">{children}</div>
-        <Footer />
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Header />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
