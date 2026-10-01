@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   github: 'https://github.com/abdulhannansajid90',
   linkedin: 'https://www.linkedin.com/in/abdul-hannan-110251386',
   resumeUrl: null, // default null; user can add e.g. '/resume.pdf' to show resume button
-  avatar: null, // default null; user can add e.g. '/avatar.webp' to display avatar photo
+  avatar: '/avatar.webp',
   url: getBaseUrl(),
   metaTitle: 'Abdul Hannan — Developer & GDGoC Member',
   metaDescription:

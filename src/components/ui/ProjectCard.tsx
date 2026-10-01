@@ -19,7 +19,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <article
-      className={`project-card relative group rounded-[14px] border border-[var(--line)] bg-[var(--surface)] overflow-hidden transition-colors duration-300 ${
+      className={`project-card relative group rounded-[14px] border border-[var(--line)] hover:border-[var(--ink)] bg-[var(--surface)] overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         isFeatured
           ? 'grid grid-cols-1 lg:grid-cols-12 gap-0'
           : 'flex flex-col h-full'

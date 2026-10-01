@@ -42,16 +42,29 @@ export function About() {
 
           {/* 9 columns content on the right */}
           <div className="lg:col-span-9 space-y-12">
-            {/* Optional Avatar */}
+            {/* Editorial Portrait Card */}
             {siteConfig.avatar && (
               <Reveal>
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border border-[var(--line)]">
-                  <Image
-                    src={siteConfig.avatar}
-                    alt={siteConfig.name}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)] max-w-xl">
+                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-[var(--line)] shadow-sm">
+                    <Image
+                      src={siteConfig.avatar}
+                      alt={siteConfig.name}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <span className="mono-label text-[11px] text-[var(--accent)] font-semibold">
+                      Abdul Hannan &middot; Profile
+                    </span>
+                    <h3 className="font-semibold text-lg text-[var(--ink)]">
+                      Student &amp; Full-Stack AI Engineer
+                    </h3>
+                    <p className="text-xs text-[var(--muted)] font-mono">
+                      Institute of Space Technology, Islamabad &middot; Class of 2029
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             )}

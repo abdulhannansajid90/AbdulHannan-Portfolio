@@ -3,24 +3,48 @@ import { siteConfig } from '@/content/site';
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowUpRightIcon } from '@/components/ui/icons';
 
+import Image from 'next/image';
+
 export function Hero() {
   return (
-    <section id="top" className="pt-20 sm:pt-28 pb-16 sm:pb-24 border-b border-[var(--line)]">
+    <section id="top" className="relative pt-20 sm:pt-28 pb-16 sm:pb-24 border-b border-[var(--line)] overflow-hidden">
+      {/* Subtle Ambient Aura */}
+      <div className="ambient-aura absolute inset-0 pointer-events-none -z-10" />
+
       <div className="max-w-[1120px] mx-auto px-6 sm:px-10">
         <div>
-          {/* Status chip with accent dot */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wide bg-[var(--surface)] text-[var(--ink)] border border-[var(--line)] mb-6">
-            <span
-              className="w-2 h-2 rounded-full bg-[var(--accent)] shrink-0 animate-pulse"
-              aria-hidden="true"
-            />
-            <span>Open to internships &amp; collaborations</span>
-          </div>
+          {/* Profile Picture & Live Status Row */}
+          <div className="flex flex-wrap items-center gap-4 mb-8">
+            <div className="relative group">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-tr from-[var(--line)] via-[var(--accent)] to-[var(--line)]">
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-[var(--surface)]">
+                  <Image
+                    src="/avatar.webp"
+                    alt={siteConfig.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority
+                  />
+                </div>
+              </div>
+              {/* Pulsing online status indicator */}
+              <span className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-[var(--bg)] p-0.5 flex items-center justify-center">
+                <span className="w-full h-full rounded-full bg-[var(--accent)] relative">
+                  <span className="animate-beacon-ping absolute inset-0 rounded-full bg-[var(--accent)] opacity-75" />
+                </span>
+              </span>
+            </div>
 
-          {/* Mono kicker */}
-          <p className="mono-label mb-4 text-[var(--muted)] font-medium">
-            {siteConfig.kicker}
-          </p>
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wide bg-[var(--surface)] text-[var(--ink)] border border-[var(--line)] mb-1">
+                <span className="w-2 h-2 rounded-full bg-[var(--accent)] shrink-0 animate-pulse" />
+                <span>Open to internships &amp; collaborations</span>
+              </div>
+              <p className="mono-label text-[var(--muted)] font-medium">
+                {siteConfig.kicker}
+              </p>
+            </div>
+          </div>
 
           {/* H1 Heading */}
           <h1 className="hero-title text-[var(--ink)] mb-6 max-w-4xl">
