@@ -18,18 +18,20 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-5 mb-8">
             {/* Animated Name Plate */}
             <div className="relative group cursor-default">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
-              <div className="relative px-5 py-2.5 bg-[var(--surface)] border border-[var(--line)] rounded-xl flex items-center">
-                <span className="text-xl sm:text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#C084FC]">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] rounded-xl blur opacity-40 group-hover:opacity-80 transition duration-500" />
+              <div className="relative px-6 py-3 bg-[var(--surface)] border border-[var(--line)] rounded-xl flex items-center">
+                <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#C084FC]">
                   Abdul Hannan
                 </span>
               </div>
-            </div>            <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium tracking-wide bg-[var(--surface)] text-[var(--ink)] border border-[var(--line)] shadow-sm hover:border-[var(--accent)]/50 transition-colors mb-1.5 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-[var(--accent)] shrink-0 animate-pulse shadow-[0_0_8px_var(--accent)]" />
+            </div>
+            
+            <div className="mt-2 sm:mt-0">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-medium tracking-wide bg-[var(--surface)] text-[var(--ink)] border border-[var(--line)] shadow-sm hover:border-[var(--accent)]/50 transition-colors mb-1.5 backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0 animate-pulse shadow-[0_0_8px_var(--accent)]" />
                 <span>Open to internships &amp; collaborations</span>
               </div>
-              <p className="mono-label text-[var(--muted)] font-medium">
+              <p className="text-[10px] sm:text-[11px] font-mono tracking-wider text-[var(--muted)] font-medium uppercase">
                 {siteConfig.kicker}
               </p>
             </div>
