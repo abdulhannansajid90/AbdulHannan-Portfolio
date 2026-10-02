@@ -44,24 +44,30 @@ export function About() {
           {/* 9 columns content on the right */}
           <div className="lg:col-span-9 space-y-12">
             {/* Editorial Portrait Card */}
-            {siteConfig.avatar && (
-              <Reveal>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm hover:border-[var(--accent)]/50 hover:shadow-[0_8px_30px_rgba(56,189,248,0.1)] transition-all duration-300 max-w-xl">
-
-                  <div className="space-y-1">
-                    <span className="mono-label text-[11px] text-[var(--accent)] font-semibold tracking-wider">
-                      Abdul Hannan &middot; Profile
+            <Reveal>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm hover:border-[var(--accent)]/50 hover:shadow-[0_8px_30px_rgba(56,189,248,0.1)] transition-all duration-300 max-w-xl">
+                {/* Name Badge */}
+                <div className="relative group cursor-default shrink-0">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-[#38BDF8] via-[#818CF8] to-[#C084FC] rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
+                  <div className="relative px-5 py-4 bg-[var(--surface)] border border-[var(--line)] rounded-xl flex items-center justify-center">
+                    <span className="text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#C084FC]">
+                      AH
                     </span>
-                    <h3 className="font-semibold text-lg text-[var(--ink)]">
-                      Student &amp; Full-Stack AI Engineer
-                    </h3>
-                    <p className="text-xs text-[var(--muted)] font-mono">
-                      Institute of Space Technology, Islamabad &middot; Class of 2029
-                    </p>
                   </div>
                 </div>
-              </Reveal>
-            )}
+                <div className="space-y-1">
+                  <span className="mono-label text-[11px] text-[var(--accent)] font-semibold tracking-wider">
+                    Abdul Hannan &middot; Profile
+                  </span>
+                  <h3 className="font-semibold text-lg text-[var(--ink)]">
+                    Student &amp; Full-Stack AI Engineer
+                  </h3>
+                  <p className="text-xs text-[var(--muted)] font-mono">
+                    Institute of Space Technology, Islamabad &middot; Class of 2029
+                  </p>
+                </div>
+              </div>
+            </Reveal>
 
             {/* Bio */}
             <Reveal>
