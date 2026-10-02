@@ -16,27 +16,7 @@ export function Hero() {
         <div>
           {/* Profile Picture & Live Status Row */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <div className="relative group">
-              {/* Rotating Gradient Halo */}
-              <div className="relative p-[2.5px] rounded-full overflow-hidden shadow-[0_0_24px_rgba(56,189,248,0.25)]">
-                <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,#38BDF8,#818CF8,#C084FC,#38BDF8)] animate-spin-slow opacity-90" />
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-[var(--surface)]">
-                  <Image
-                    src={getAssetPath('/avatar.webp')}
-                    alt={siteConfig.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-108"
-                    priority
-                  />
-                </div>
-              </div>
-              {/* Pulsing online status indicator */}
-              <span className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-[var(--bg)] p-0.5 flex items-center justify-center">
-                <span className="w-full h-full rounded-full bg-[var(--accent)] relative shadow-[0_0_8px_var(--accent)]">
-                  <span className="animate-beacon-ping absolute inset-0 rounded-full bg-[var(--accent)] opacity-75" />
-                </span>
-              </span>
-            </div>
+
 
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium tracking-wide bg-[var(--surface)] text-[var(--ink)] border border-[var(--line)] shadow-sm hover:border-[var(--accent)]/50 transition-colors mb-1.5 backdrop-blur-sm">
