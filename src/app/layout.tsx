@@ -10,8 +10,8 @@ import { getBaseUrl } from '@/lib/utils';
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FAFAF7' },
-    { media: '(prefers-color-scheme: dark)', color: '#0E0F11' },
+    { media: '(prefers-color-scheme: light)', color: '#F8FAFC' },
+    { media: '(prefers-color-scheme: dark)', color: '#070913' },
   ],
   width: 'device-width',
   initialScale: 1,

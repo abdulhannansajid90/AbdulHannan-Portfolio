@@ -27,7 +27,7 @@ export function Contact() {
           <div className="lg:col-span-9 space-y-10">
             <Reveal>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[var(--ink)] max-w-2xl leading-tight">
-                Let&apos;s build something together.
+                Let&apos;s <span className="text-gradient">build something</span> together.
               </h3>
               <p className="mt-4 text-base sm:text-lg text-[var(--muted)] body-measure leading-relaxed">
                 Open to internships, AI/ML projects and full-stack collaborations. Email is the fastest way to reach me.
@@ -36,8 +36,8 @@ export function Contact() {
 
             {/* Email Contact Block */}
             <Reveal>
-              <div className="p-6 sm:p-8 rounded-xl border border-[var(--line)] bg-[var(--surface)] space-y-4">
-                <span className="mono-label block">Direct Email</span>
+              <div className="p-6 sm:p-8 rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm hover:border-[var(--accent)]/50 hover:shadow-[0_12px_36px_rgba(56,189,248,0.12)] transition-all duration-300 space-y-4">
+                <span className="mono-label block text-[var(--accent)] font-semibold tracking-wider">Direct Email</span>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <a
                     href={`mailto:${siteConfig.email}`}

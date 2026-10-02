@@ -22,7 +22,7 @@ export function About() {
     },
     {
       title: 'Community',
-      desc: 'Active in GDG on Campus at IST through workshops, hackathons and community projects in the AI/Gen AI track.',
+      desc: 'Active in tech communities through workshops, hackathons and collaborative projects in the AI/Gen AI space.',
     },
   ];
 
@@ -45,7 +45,7 @@ export function About() {
             {/* Editorial Portrait Card */}
             {siteConfig.avatar && (
               <Reveal>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)] max-w-xl">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm hover:border-[var(--accent)]/50 hover:shadow-[0_8px_30px_rgba(56,189,248,0.1)] transition-all duration-300 max-w-xl">
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-[var(--line)] shadow-sm">
                     <Image
                       src={siteConfig.avatar}
@@ -55,7 +55,7 @@ export function About() {
                     />
                   </div>
                   <div className="space-y-1">
-                    <span className="mono-label text-[11px] text-[var(--accent)] font-semibold">
+                    <span className="mono-label text-[11px] text-[var(--accent)] font-semibold tracking-wider">
                       Abdul Hannan &middot; Profile
                     </span>
                     <h3 className="font-semibold text-lg text-[var(--ink)]">
@@ -83,8 +83,8 @@ export function About() {
 
             {/* "Currently" Mono Table */}
             <Reveal>
-              <div className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-6 font-mono text-xs sm:text-sm">
-                <span className="mono-label block text-[var(--muted)] mb-4 font-semibold">
+              <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm p-6 font-mono text-xs sm:text-sm">
+                <span className="mono-label block text-[var(--accent)] mb-4 font-semibold tracking-wider">
                   Currently
                 </span>
                 <div className="divide-y divide-[var(--line)]">
@@ -106,19 +106,19 @@ export function About() {
             {/* "Approach" 3 Columns */}
             <Reveal>
               <div>
-                <span className="mono-label block mb-6">Approach</span>
+                <span className="mono-label block mb-6 text-[var(--accent)] font-semibold tracking-wider">Approach</span>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {approachItems.map((item, idx) => (
                     <div
                       key={item.title}
-                      className="p-5 rounded-xl border border-[var(--line)] bg-[var(--surface)] flex flex-col justify-between"
+                      className="p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm hover:border-[var(--accent)]/50 hover:shadow-[0_8px_30px_rgba(56,189,248,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
                     >
                       <div>
                         <div className="flex items-center justify-between mb-3">
                           <h3 className="font-semibold text-base text-[var(--ink)]">
                             {item.title}
                           </h3>
-                          <span className="font-mono text-xs text-[var(--muted)]">
+                          <span className="font-mono text-xs text-[var(--accent)] font-bold">
                             0{idx + 1}
                           </span>
                         </div>

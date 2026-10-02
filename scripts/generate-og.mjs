@@ -45,7 +45,7 @@ const ogSvg = `
       Full-stack Engineer &amp; Agentic AI Developer
     </text>
     <text x="0" y="130" fill="#9A9AA3" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">
-      GDG on Campus (AI/Gen AI Track) · Developer Advocate Applicant
+      Developer Advocate Applicant
     </text>
   </g>
 

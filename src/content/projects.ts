@@ -7,8 +7,8 @@ export const projects: Project[] = [
     summary:
       'Agentic AI full-stack platform using autonomous multi-agent workflows to streamline doctor discovery and automate appointment booking.',
     featured: true,
-    status: 'In progress',
-    period: 'Jun 2026 – Present',
+    status: 'Completed',
+    period: 'Jun 2026',
     role: 'Full-stack Developer',
     tags: ['Agentic AI', 'Full-stack', 'Hackathon', 'Healthcare'],
     allTags: ['Agentic AI', 'Next.js', 'Node.js', 'Google Gemini API', 'Hackathon', 'Healthcare'],
@@ -21,7 +21,7 @@ export const projects: Project[] = [
       'Clean full-stack architecture connecting React frontend with Node.js backend services',
     ],
     links: {
-      // Intentionally empty per spec; repo/demo link will be added when made public
+      live: 'https://mtm-hackathonfinal.vercel.app/',
     },
     createdAt: '2026-06-01T00:00:00Z',
   },
@@ -52,57 +52,7 @@ export const projects: Project[] = [
     coverImage: '/projects/easyrent.webp',
     createdAt: '2026-08-24T17:51:50Z',
   },
-  {
-    slug: 'diasporagrid',
-    title: 'Diaspora-Grid',
-    summary:
-      'Empowerment portal for international diaspora communities offering remittance comparisons, travel advisories, and rights protection workflows.',
-    featured: false,
-    status: 'Completed',
-    period: 'Jun 2026',
-    role: 'Full-stack Developer',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'Auth.js'],
-    allTags: ['Next.js App Router', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite', 'Auth.js v5', 'Google Generative AI', 'shadcn/ui'],
-    overview:
-      'Diaspora-Grid is a comprehensive Next.js web application designed to support diaspora communities with essential utilities for financial transparency, pre-departure migration checks, welfare tracking, and emergency rights assistance.',
-    features: [
-      'Rooh Network: Community-driven communication channel for diaspora members',
-      'Safar Check: Pre-departure validation protocols and travel advisories',
-      'Hawaala Buster: Transparent remittance fee comparison and transfer tracking',
-      'Amaanat Shield: Welfare tracking and financial assistance coordination',
-      'Passport SOS: Emergency assistance timeline and rights protection workflows',
-      'Ujrat Tracker: Transparent ledger for recording dues and verified wages',
-    ],
-    links: {
-      code: 'https://github.com/abdulhannansajid90/diasporagrid',
-    },
-    createdAt: '2026-06-10T19:07:19Z',
-  },
-  {
-    slug: 'ecosort-campus',
-    title: 'EcoSort Campus App',
-    summary:
-      'AI-powered campus waste classification and smart bin navigation system built with a modular React frontend and Express backend.',
-    featured: false,
-    status: 'Completed',
-    period: 'May 2026',
-    role: 'Frontend & API Developer',
-    tags: ['React', 'Vite', 'Node.js', 'LLM API'],
-    allTags: ['React 18', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Anthropic API', 'Railway'],
-    overview:
-      'EcoSort Campus App is an intelligent sustainability tool designed for university campuses. It utilizes vision and language models to identify waste types and guide students to the correct disposal receptacles on campus.',
-    features: [
-      'AI-assisted item categorization using multimodal LLM prompts',
-      'Campus bin mapping and location guidance for eco-friendly waste disposal',
-      'Decoupled architecture: responsive Vite frontend communicating with a dedicated Express API',
-      'CORS-protected backend ready for automated cloud deployment via Railway',
-    ],
-    links: {
-      frontend: 'https://github.com/abdulhannansajid90/frntend',
-      backend: 'https://github.com/abdulhannansajid90/bckend',
-    },
-    createdAt: '2026-05-11T22:48:08Z',
-  },
+
   {
     slug: 'lan-scanner',
     title: 'LAN Scanner in C++',
@@ -150,5 +100,27 @@ export const projects: Project[] = [
       code: 'https://github.com/abdulhannansajid90/ICT-project-01',
     },
     createdAt: '2025-12-12T18:58:25Z',
+  },
+  {
+    slug: 'pro-pk',
+    title: 'Pro-PK',
+    summary:
+      'A collaborative web project I contributed to. [Update summary here]',
+    featured: false,
+    status: 'Live',
+    period: '2026',
+    role: 'Collaborator',
+    tags: ['Web Development', 'Collaboration'],
+    allTags: ['Web Development', 'Collaboration'],
+    overview:
+      'Pro-PK is a collaborative project I contributed to. [Update overview here]',
+    features: [
+      'Collaborative development',
+      '[Add specific feature]',
+    ],
+    links: {
+      live: 'https://incandescent-alpaca-ce90d4.netlify.app',
+    },
+    createdAt: '2026-09-01T00:00:00Z',
   },
 ];

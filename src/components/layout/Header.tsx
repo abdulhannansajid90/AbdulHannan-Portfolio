@@ -20,19 +20,20 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-[var(--bg)] transition-all duration-200 ${
+      className={`sticky top-0 z-50 w-full backdrop-blur-md transition-all duration-300 ${
         scrolled
-          ? 'border-b border-[var(--line)] py-3 shadow-[0_1px_0_0_var(--line)]'
-          : 'border-b border-transparent py-4 sm:py-5'
+          ? 'bg-[var(--bg)]/85 border-b border-[var(--line)] py-3 shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
+          : 'bg-[var(--bg)]/60 border-b border-transparent py-4 sm:py-5'
       }`}
     >
       <div className="max-w-[1120px] mx-auto px-6 sm:px-10 flex items-center justify-between">
         {/* Wordmark */}
         <Link
           href="/#top"
-          className="text-base sm:text-lg font-semibold tracking-tight text-[var(--ink)] hover:text-[var(--accent)] transition-colors focus-visible:outline-none"
+          className="group flex items-center gap-2 text-base sm:text-lg font-semibold tracking-tight text-[var(--ink)] hover:text-[var(--accent)] transition-colors focus-visible:outline-none"
         >
-          {siteConfig.name}
+          <span className="w-2 h-2 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)] group-hover:scale-125 transition-transform" />
+          <span>{siteConfig.name}</span>
         </Link>
 
         {/* Navigation & Controls */}

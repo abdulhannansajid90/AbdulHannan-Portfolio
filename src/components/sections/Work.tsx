@@ -41,18 +41,20 @@ export function Work() {
           {/* Section Header */}
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 pb-6 border-b border-[var(--line)]">
             <div>
-              <span className="mono-label block mb-2">(01) Work</span>
-              <h2 className="section-title text-[var(--ink)]">Selected Projects</h2>
+              <span className="mono-label block mb-2 text-[var(--accent)] font-semibold tracking-wider">(01) Work</span>
+              <h2 className="section-title text-[var(--ink)]">
+                Selected <span className="text-gradient">Projects</span>
+              </h2>
             </div>
             
             {/* Interactive Filter Pills */}
-            <div className="flex items-center gap-2 p-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] text-xs font-mono">
+            <div className="flex items-center gap-1.5 p-1 rounded-xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-sm text-xs font-mono shadow-sm">
               <button
                 type="button"
                 onClick={() => setActiveFilter('all')}
-                className={`px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-lg transition-all duration-200 cursor-pointer ${
                   activeFilter === 'all'
-                    ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold'
+                    ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold shadow-sm'
                     : 'text-[var(--muted)] hover:text-[var(--ink)]'
                 }`}
               >
@@ -61,9 +63,9 @@ export function Work() {
               <button
                 type="button"
                 onClick={() => setActiveFilter('ai')}
-                className={`px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-lg transition-all duration-200 cursor-pointer ${
                   activeFilter === 'ai'
-                    ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold'
+                    ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold shadow-sm'
                     : 'text-[var(--muted)] hover:text-[var(--ink)]'
                 }`}
               >
@@ -72,9 +74,9 @@ export function Work() {
               <button
                 type="button"
                 onClick={() => setActiveFilter('systems')}
-                className={`px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-lg transition-all duration-200 cursor-pointer ${
                   activeFilter === 'systems'
-                    ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold'
+                    ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold shadow-sm'
                     : 'text-[var(--muted)] hover:text-[var(--ink)]'
                 }`}
               >

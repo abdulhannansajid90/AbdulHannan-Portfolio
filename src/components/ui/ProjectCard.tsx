@@ -17,9 +17,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const indexStr = String(index + 1).padStart(2, '0');
   const isFeatured = project.featured;
 
+  const mainLink = project.links.live || project.links.code || project.links.frontend || project.links.backend || '#';
+  const hasLink = mainLink !== '#';
+
   return (
     <article
-      className={`project-card relative group rounded-[14px] border border-[var(--line)] hover:border-[var(--ink)] bg-[var(--surface)] overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+      className={`project-card relative group rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md overflow-hidden transition-all duration-300 shadow-sm ${
         isFeatured
           ? 'grid grid-cols-1 lg:grid-cols-12 gap-0'
           : 'flex flex-col h-full'
@@ -38,7 +41,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 src={project.coverImage}
                 alt={`${project.title} interface preview`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes={isFeatured ? '(min-width: 1024px) 60vw, 100vw' : '(min-width: 768px) 50vw, 100vw'}
                 priority={index === 0}
               />
@@ -62,23 +65,31 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <div>
           {/* Header row: Index & Status */}
           <div className="flex items-center justify-between gap-3 mb-4">
-            <span className="mono-label font-bold text-[var(--muted)]">
+            <span className="mono-label font-bold text-[var(--muted)] group-hover:text-[var(--accent)] transition-colors">
               ({indexStr})
             </span>
             <StatusChip status={project.status} />
           </div>
 
           {/* Title with stretched link */}
-          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-[var(--ink)] mb-2.5 flex items-center justify-between group-hover:text-[var(--ink)]">
-            <Link
-              href={`/work/${project.slug}/`}
-              className="after:absolute after:inset-0 after:z-10 focus:outline-none"
-            >
-              {project.title}
-            </Link>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-[var(--ink)] mb-2.5 flex items-center justify-between group-hover:text-[var(--accent)] transition-colors">
+            {hasLink ? (
+              <a
+                href={mainLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="after:absolute after:inset-0 after:z-10 focus:outline-none"
+              >
+                {project.title}
+              </a>
+            ) : (
+              <span className="after:absolute after:inset-0 after:z-10 focus:outline-none">
+                {project.title}
+              </span>
+            )}
             <ArrowUpRightIcon
               size={18}
-              className="arrow-indicator text-[var(--muted)] group-hover:text-[var(--ink)] shrink-0 transition-transform duration-200"
+              className="arrow-indicator text-[var(--muted)] group-hover:text-[var(--accent)] shrink-0 transition-transform duration-200"
             />
           </h3>
 
@@ -120,12 +131,16 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             )}
           </div>
 
-          <Link
-            href={`/work/${project.slug}/`}
-            className="text-xs uppercase tracking-wider text-[var(--muted)] hover:text-[var(--ink)] transition-colors"
-          >
-            Case Study &rarr;
-          </Link>
+          {hasLink && (
+            <a
+              href={mainLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-wider text-[var(--muted)] hover:text-[var(--ink)] transition-colors z-20 relative"
+            >
+              View Project &rarr;
+            </a>
+          )}
         </div>
       </div>
     </article>
