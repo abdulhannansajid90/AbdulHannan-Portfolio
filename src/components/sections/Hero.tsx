@@ -21,7 +21,7 @@ export function Hero() {
                 <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,#38BDF8,#818CF8,#C084FC,#38BDF8)] animate-spin-slow opacity-90" />
                 <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-[var(--surface)]">
                   <Image
-                    src="/avatar.webp"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/avatar.webp`}
                     alt={siteConfig.name}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-108"

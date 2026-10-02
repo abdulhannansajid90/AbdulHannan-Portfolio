@@ -48,7 +48,7 @@ export function About() {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-5 rounded-2xl border border-[var(--line)] bg-[var(--surface)]/90 backdrop-blur-md shadow-sm hover:border-[var(--accent)]/50 hover:shadow-[0_8px_30px_rgba(56,189,248,0.1)] transition-all duration-300 max-w-xl">
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-[var(--line)] shadow-sm">
                     <Image
-                      src={siteConfig.avatar}
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${siteConfig.avatar}`}
                       alt={siteConfig.name}
                       fill
                       className="object-cover transition-transform duration-500 hover:scale-105"

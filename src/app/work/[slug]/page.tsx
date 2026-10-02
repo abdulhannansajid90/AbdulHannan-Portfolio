@@ -114,7 +114,7 @@ export default function CaseStudyPage({ params }: Props) {
             {project.coverImage ? (
               <div className="w-full aspect-[16/10] relative">
                 <Image
-                  src={project.coverImage}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${project.coverImage}`}
                   alt={`${project.title} overview display`}
                   fill
                   className="object-cover"
