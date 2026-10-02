@@ -1,3 +1,10 @@
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+let repo = '';
+if (isGithubActions && process.env.GITHUB_REPOSITORY) {
+  const repoName = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
+  repo = `/${repoName}`;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -5,6 +12,8 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  basePath: repo,
+  assetPrefix: repo,
 };
 
 export default nextConfig;
