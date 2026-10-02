@@ -7,6 +7,7 @@ import { StatusChip } from './StatusChip';
 import { ExternalLink } from './ExternalLink';
 import { ProjectCover } from './ProjectCover';
 import { ArrowUpRightIcon } from './icons';
+import { getAssetPath } from '@/lib/utils';
 
 interface ProjectCardProps {
   project: Project;
@@ -38,7 +39,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.coverImage ? (
             <div className="w-full aspect-[16/10] relative bg-[var(--surface)]">
               <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${project.coverImage}`}
+                src={getAssetPath(project.coverImage)}
                 alt={`${project.title} interface preview`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -15,3 +15,12 @@ export function getBaseUrl(): string {
   }
   return 'http://localhost:3000';
 }
+
+export function getAssetPath(path: string): string {
+  // Always ensure path starts with a slash
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  if (process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true') {
+    return `/AbdulHannan-Portfolio${cleanPath}`;
+  }
+  return cleanPath;
+}

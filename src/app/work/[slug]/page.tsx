@@ -8,6 +8,7 @@ import { StatusChip } from '@/components/ui/StatusChip';
 import { Tag } from '@/components/ui/Tag';
 import { ExternalLink } from '@/components/ui/ExternalLink';
 import { ProjectCover } from '@/components/ui/ProjectCover';
+import { getAssetPath } from '@/lib/utils';
 import { ArrowLeftIcon } from '@/components/ui/icons';
 
 interface Props {
@@ -114,7 +115,7 @@ export default function CaseStudyPage({ params }: Props) {
             {project.coverImage ? (
               <div className="w-full aspect-[16/10] relative">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${project.coverImage}`}
+                  src={getAssetPath(project.coverImage)}
                   alt={`${project.title} overview display`}
                   fill
                   className="object-cover"
